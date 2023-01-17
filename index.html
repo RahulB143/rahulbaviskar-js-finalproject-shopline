@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/344224d1f8.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="./script.js"></script>
+  <script src="./productDetails.js"></script>
+</head>
+<body>
+  <header>
+    <nav id="topbar">
+      <div id="leftContainer">
+        <div id="logo" class="left"><a href="index.html"><span>SHOP</span>LINE</a></div>
+        <a href="#clothing-grid" class="left product">CLOTHING</a>
+        <a href="#accessory-grid" class="left product">ACCESSORIES</a>
+      </div>
+
+      <div id="searchContainer">
+        <i class="fas fa-search"></i>
+        <input type="search" name="search" id="search" placeholder="Search for clothing and accessories">
+      </div>
+      <div id="rightContainer">
+        <div id="countWrapper">
+          <a href="./checkoutpage.html"><i class="fas fa-shopping-cart"></i></a>
+          <p id="cart-count"> <span id="count">0</span></p>
+        </div>
+        <img id="avatar" src="avatar.png" alt="avatar">
+      </div>
+      </div>
+    </nav>
+  </header>
+<!---------------------------------------------------- mainContainer------------------------------- -->
+  <div id="mainContainer">
+    <section>
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="https://imgur.com/96OnkX7.png" />
+        </div>
+        <div class="item">
+          <img src="https://imgur.com/KtGxwnN.png" />
+        </div>
+        <div class="item">
+          <img src="https://imgur.com/sfjg9R8.png" />
+        </div>
+        <div class="item">
+          <img src="https://imgur.com/p0wdadG.png" />
+        </div>
+      </div>
+    </section>
+    <section id="homeproduct">
+      <section id="section" class="homepage-section">
+        <h3 class="section-heading">Clothing for Men and Women</h3>
+        <div id="clothing-grid" class="product-grid">
+        </div>
+      </section>
+      <section id="section" class="homepage-section">
+        <h3 class="section-heading">Accessories for Men and Women</h3>
+        <div id="accessory-grid" class="product-grid">
+        </div>
+      </section>
+    </section>
+  </div>
+  <img id="edyodaProjectlogo" src="https://i.imgur.com/OKAY6Fl.png" alt="Edyoda project logo">
+  <!------------------------------------------ footer section----------------------------------------------- -->
+  <footer>
+    <section id="footerBody">
+      <div>
+        <p class="footerContainer">ONLINE STORE</p>
+        <a href="#clothing-grid">MEN CLOTHING</a>
+        <a href="#clothing-grid">WOMEN CLOTHING</a>
+        <a href="#accessory-grid">MEN ACCESSORIES</a>
+        <a href="#accessory-grid">WOMEN ACCESSORIES</a>
+      </div>
+      <div>
+        <p class="footerContainer">HELPFUL LINKS</p>
+        <a href="">HOME</a>
+        <a href="">ABOUT</a>
+        <a href="">CONTACT</a>
+      </div>
+      <div>
+        <p class="footerContainer">PARTNERS</p>
+        <a href="">ZARA</a>
+        <a href="">PANTALOONS</a>
+        <a href="">LAVIS</a>
+        <a href="">UCB</a>
+        <a href="">+MANY MORE</a>
+      </div>
+      <div>
+        <p class="footerContainer">ADDRESS</p>
+        <a href="">BUILDING 101</a>
+        <a href=""> CENTRAL AVENUE</a>
+        <a href="">LA - 902722</a>
+        <a href="">UNITED STATESS</a>
+      </div>
+    </section>
+  </footer>
+  <!-- -----------------------javascript/jquery ---------------------------------------->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: false,
+      centerMode: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 1000,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 1
+        },
+        1000: {
+          items: 1
+        }
+      }
+    })
+  </script>
+  <!---------------------- count Javascript ----------------------------->
+  <script>
+    $(document).ready(function() {
+    var productList = window.localStorage.getItem('product-list');
+    productList = productList === null || productList === '' ? [] : productList;
+    productList = productList.length > 0 ? JSON.parse(productList) : [];
+
+    var totalCount = 0;
+    for(var i=0; i<productList.length; i++) {
+        totalCount = totalCount + productList[i].count;
+    }
+    $('#cart-count').html(totalCount);
+})
+  </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details Page</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/344224d1f8.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./script.js"></script>
+  <script src="./productDetails.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav id="topbar">
+      <div id="leftContainer">
+        <div id="logo" class="left"><a href="./index.html"><span>SHOP</span>LINE</a></div>
+        <a href="./index.html#clothing-grid" class="left product">CLOTHING</a>
+        <a href="./index.html#accessory-grid" class="left product">ACCESSORIES</a>
+      </div>
+
+      <div id="searchContainer">
+        <i class="fas fa-search"></i>
+        <input type="search" name="search" id="search" placeholder="Search for clothing and accessories">
+      </div>
+      <div id="rightContainer">
+        <div id="countWrapper">
+          <a href="./checkoutpage.html"><i class="fas fa-shopping-cart"></i></a>
+          <p id="cart-count"> <span id="count">0</span></p>
+        </div>
+        <img id="avatar" src="avatar.png" alt="avatar">
+      </div>
+      </div>
+    </nav>
+  </header>
+  <!------------------------------------------- product details page ------------------------------------------------->
+  <div id="productDetails">
+    <div class="product-wrapper">
+      <div class="left-column">
+        <img id="product-preview" class="product-img" src="../assets/default-product.png" />
+      </div>
+      <div class="right-column">
+        <div class="product-description">
+          <h1 id="name">Product Title</h1>
+          <h1 id="brand">Product Brand</h1>
+          <h4 class="section-heading">Price: Rs <span id="price">XXXX</span></h4>
+          <h4 class="section-heading">Description</h4>
+          <p id="description">Product Description</p>
+          <h4 class="section-heading">Product Preview</h4>
+          <div id="product-images">
+            <!-- <img src="" /> -->
+          </div>
+          <button id="btn-add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img id="edyodaProjectlogo" src="https://i.imgur.com/OKAY6Fl.png" alt="Edyoda project logo">
+  <!------------------------------------------ footer section----------------------------------------------- -->
+  <footer>
+    <section id="footerBody">
+      <div>
+        <p class="footerContainer">ONLINE STORE</p>
+        <a href="#clothing-grid">MEN CLOTHING</a>
+        <a href="#clothing-grid">WOMEN CLOTHING</a>
+        <a href="#accessory-grid">MEN ACCESSORIES</a>
+        <a href="#accessory-grid">WOMEN ACCESSORIES</a>
+      </div>
+      <div>
+        <p class="footerContainer">HELPFUL LINKS</p>
+        <a href="">HOME</a>
+        <a href="">ABOUT</a>
+        <a href="">CONTACT</a>
+      </div>
+      <div>
+        <p class="footerContainer">PARTNERS</p>
+        <a href="">ZARA</a>
+        <a href="">PANTALOONS</a>
+        <a href="">LAVIS</a>
+        <a href="">UCB</a>
+        <a href="">+MANY MORE</a>
+      </div>
+      <div>
+        <p class="footerContainer">ADDRESS</p>
+        <a href="">BUILDING 101</a>
+        <a href=""> CENTRAL AVENUE</a>
+        <a href="">LA - 902722</a>
+        <a href="">UNITED STATESS</a>
+      </div>
+    </section>
+  </footer>
+  <!-- -----------------------javascript/jquery ---------------------------------------->
+  <!---------------------- count Javascript ----------------------------->
+  <script>
+    $(document).ready(function () {
+      var productList = window.localStorage.getItem('product-list');
+      productList = productList === null || productList === '' ? [] : productList;
+      productList = productList.length > 0 ? JSON.parse(productList) : [];
+
+      var totalCount = 0;
+      for (var i = 0; i < productList.length; i++) {
+        totalCount = totalCount + productList[i].count;
+      }
+      $('#cart-count').html(totalCount);
+    })
+  </script>
+</body>
+
+</html>
