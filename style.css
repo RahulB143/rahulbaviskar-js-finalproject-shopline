@@ -472,6 +472,8 @@ footer{
     font-size: 30px;
     margin-right: 70px;
     letter-spacing: 1px;
+    width: 100%;
+    text-align: left;
   }
 #orderContainer{
     width: 100%;
@@ -536,6 +538,8 @@ footer div a{
   }
   .product-description h1 {
     font-size: 28px;
+    width: 100%;
+    text-align: left;
   }
   #orderContainer{
     width: 50%;
@@ -640,6 +644,8 @@ footer div a{
       }
       .product-description h1 {
         font-size: 32px;
+        width: 100%;
+        text-align: left;
       }
       #brand{
         font-size: 15px;
@@ -684,4 +690,37 @@ footer div a{
 #continueShopping{
     margin: 30px 0 20px 160px;
 } 
+
+@media screen  and (max-width:400px){
+    .fa-circle-check{
+        margin: 20px 0 20px 160px;
+        align-items: center;
+        text-align: center;
+    } 
+    #continueShopping{
+        margin: 30px 0 20px 120px;
+    } 
+    #footerBody{
+        padding: 0px;
+        margin: 0px;
+    }
+    .footerContainer{
+        font-size: 9px;
+    }
+    footer div a{
+        font-size: 7px;
+    }
+    .left-column img{
+      margin-top: 0px;
+    }
+    .right-column{
+        padding-left: 12px;
+        
+    }
+    .product-description h1{
+        font-size: 25px;
+        width: 100%;
+       text-align: left;
+    }
+}
 }
